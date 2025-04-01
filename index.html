@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SACCO Management System - Member App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="login-screen" class="screen active">
+        <div class="logo">SACCO Logo</div>
+        <h1>SACCO Member App</h1>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <select id="language-toggle">
+                <option value="en">English</option>
+                <option value="lg">Luganda</option>
+            </select>
+            <button type="submit">Login</button>
+        </form>
+    </div> 
+
+    <!-- Home Screen -->
+    <div id="home-screen" class="screen">
+        <header>
+            <h1>Welcome, [Member Name]</h1>
+            <button id="logout-btn">Logout</button>
+        </header>
+        <div class="quick-actions">
+            <button id="check-balance-btn" class="action-btn">Check Balance</button>
+            <button id="view-announcements-btn" class="action-btn">View Announcements</button>
+            <button id="contact-sacco-btn" class="action-btn">Contact SACCO</button>
+        </div>
+        <div class="notifications">
+            <h2>Notifications</h2>
+            <ul id="notifications-list">
+                <li>AGM on March 20, 2025 at 10 AM</li>
+                <li>New 5% Loan Interest Rate</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Check Balance Screen -->
+    <div id="balance-screen" class="screen">
+        <header>
+            <button class="back-btn">Back</button>
+            <h1>Account Balance</h1>
+        </header>
+        <div class="balance-info">
+            <p><strong>Savings:</strong> UGX 50,000</p>
+            <p><strong>Loan:</strong> UGX 20,000</p>
+        </div>
+    </div>
+
+    <!-- View Announcements Screen -->
+    <div id="announcements-screen" class="screen">
+        <header>
+            <button class="back-btn">Back</button>
+            <h1>Announcements</h1>
+        </header>
+        <ul id="announcements-list">
+            <li data-id="1">
+                <h3>AGM on March 20, 2025</h3>
+                <p>Join us at 10 AM at the SACCO office.</p>
+            </li>
+            <li data-id="2">
+                <h3>New 5% Loan Interest Rate</h3>
+                <p>Effective April 1, 2025. Apply now!</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Contact SACCO Screen -->
+    <div id="contact-screen" class="screen">
+        <header>
+            <button class="back-btn">Back</button>
+            <h1>Contact SACCO</h1>
+        </header>
+        <div class="contact-info">
+            <p><strong>Phone:</strong> +256 771 234 567</p>
+            <p><strong>Email:</strong> support@sacco.ug</p>
+            <p><strong>Office:</strong> SACCO Office, Main Street, Uganda</p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

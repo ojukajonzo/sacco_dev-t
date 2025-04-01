@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SACCO Social Feed</title>
+    <link rel="stylesheet" href="feed-styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">SACCO Logo</div>
+        <h1>SACCO Social Feed</h1>
+        <div class="user-info">
+            <select id="language-toggle">
+                <option value="en">English</option>
+                <option value="lg">Luganda</option>
+            </select>
+            <span>Welcome, [User Name]</span>
+            <button id="logout-btn">Logout</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Post Creation Form -->
+        <section class="post-form">
+            <form id="post-form">
+                <textarea id="post-content" placeholder="What's on your mind?" required></textarea>
+                <div class="post-options">
+                    <label for="post-image">Add Image (Optional):</label>
+                    <input type="file" id="post-image" name="post-image">
+                    <button type="submit">Post</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Feed -->
+        <section class="feed">
+            <h2>Recent Posts</h2>
+            <div id="feed-posts">
+                <!-- Sample Post (Will be populated dynamically) -->
+                <div class="post" data-id="1">
+                    <div class="post-header">
+                        <span class="post-user">John (Member)</span>
+                        <span class="post-timestamp">2025-04-01 10:00 AM</span>
+                    </div>
+                    <div class="post-content">
+                        <p>Just took a loan at 5%! Ready to expand my farm. 🚜</p>
+                    </div>
+                    <div class="post-actions">
+                        <button class="like-btn">Like (0)</button>
+                        <button class="comment-btn">Comment</button>
+                        <button class="repost-btn">Repost</button>
+                    </div>
+                    <div class="comments-section" style="display: none;">
+                        <h3>Comments</h3>
+                        <ul class="comments-list"></ul>
+                        <form class="comment-form">
+                            <input type="text" class="comment-input" placeholder="Add a comment..." required>
+                            <button type="submit">Comment</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>System Version 1.0 | Contact Support: support@sacco.ug | © 2025 SACCO</p>
+    </footer>
+
+    <script src="feed-scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SACCO Management System - Leader Dashboard</title>
+    <link rel="stylesheet" href="leader-styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">SACCO Logo</div>
+        <h1>SACCO Management System</h1>
+        <div class="user-info">
+            <select id="language-toggle">
+                <option value="en">English</option>
+                <option value="lg">Luganda</option>
+            </select>
+            <span>Welcome, Chairperson</span>
+            <button id="logout-btn">Logout</button>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="container">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#dashboard" class="active" data-section="dashboard">Dashboard</a></li>
+                <li><a href="#financial-reports" data-section="financial-reports">Financial Reports</a></li>
+                <li><a href="#event-alerts" data-section="event-alerts">Event Alerts</a></li>
+                <li><a href="#branding-updates" data-section="branding-updates">Branding Updates</a></li>
+                <li><a href="#transaction-recording" data-section="transaction-recording">Transaction Recording</a></li>
+                <li><a href="#member-management" data-section="member-management">Member Management</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="content-section active">
+                <h2>Dashboard</h2>
+                <div class="stats">
+                    <div class="stat-card">
+                        <h3>Total Members</h3>
+                        <p>150</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Savings</h3>
+                        <p>UGX 7,500,000</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Total Loans</h3>
+                        <p>UGX 3,000,000</p>
+                    </div>
+                </div>
+                <h3>Recent Announcements</h3>
+                <ul id="recent-announcements">
+                    <li>AGM on March 20, 2025</li>
+                    <li>New 5% Loan Interest Rate</li>
+                </ul>
+            </section>
+
+            <!-- Financial Reports Section -->
+            <section id="financial-reports" class="content-section">
+                <h2>Financial Reports</h2>
+                <form id="report-form">
+                    <label for="report-type">Report Type:</label>
+                    <select id="report-type" name="report-type">
+                        <option value="balance-sheet">Balance Sheet</option>
+                        <option value="loan-summary">Loan Summary</option>
+                    </select>
+                    <label for="date-range">Date Range:</label>
+                    <input type="date" id="date-range-start" name="date-range-start">
+                    <input type="date" id="date-range-end" name="date-range-end">
+                    <button type="submit">Generate Report</button>
+                </form>
+                <div id="report-output">
+                    <p>Preview: [Report will appear here]</p>
+                    <button id="export-report">Export (PDF/Excel)</button>
+                </div>
+            </section>
+
+            <!-- Event Alerts Section -->
+            <section id="event-alerts" class="content-section">
+                <h2>Event Alerts</h2>
+                <form id="alert-form">
+                    <label for="event-title">Event Title:</label>
+                    <input type="text" id="event-title" name="event-title" required>
+                    <label for="event-description">Description:</label>
+                    <textarea id="event-description" name="event-description" required></textarea>
+                    <label for="event-date">Date:</label>
+                    <input type="date" id="event-date" name="event-date" required>
+                    <label for="delivery-method">Delivery Method:</label>
+                    <select id="delivery-method" name="delivery-method">
+                        <option value="sms">SMS</option>
+                        <option value="app">App Notification</option>
+                        <option value="both">Both</option>
+                    </select>
+                    <button type="submit">Send Alert</button>
+                </form>
+                <div id="alert-confirmation"></div>
+            </section>
+
+            <!-- Branding Updates Section -->
+            <section id="branding-updates" class="content-section">
+                <h2>Branding Updates</h2>
+                <form id="update-form">
+                    <label for="update-title">Title:</label>
+                    <input type="text" id="update-title" name="update-title" required>
+                    <label for="update-message">Message:</label>
+                    <textarea id="update-message" name="update-message" required></textarea>
+                    <label for="update-image">Image (Optional):</label>
+                    <input type="file" id="update-image" name="update-image">
+                    <button type="submit">Post Update</button>
+                </form>
+                <div id="update-confirmation"></div>
+            </section>
+
+            <!-- Transaction Recording Section -->
+            <section id="transaction-recording" class="content-section">
+                <h2>Transaction Recording</h2>
+                <form id="transaction-form">
+                    <label for="member-id">Member ID:</label>
+                    <input type="text" id="member-id" name="member-id" placeholder="Search by ID or Name" required>
+                    <label for="transaction-type">Transaction Type:</label>
+                    <select id="transaction-type" name="transaction-type">
+                        <option value="deposit">Deposit</option>
+                        <option value="withdrawal">Withdrawal</option>
+                        <option value="repayment">Loan Repayment</option>
+                    </select>
+                    <label for="amount">Amount (UGX):</label>
+                    <input type="number" id="amount" name="amount" required>
+                    <label for="transaction-date">Date:</label>
+                    <input type="date" id="transaction-date" name="transaction-date" required>
+                    <button type="submit">Submit Transaction</button>
+                </form>
+                <div id="transaction-confirmation"></div>
+            </section>
+
+            <!-- Member Management Section (Placeholder) -->
+            <section id="member-management" class="content-section">
+                <h2>Member Management</h2>
+                <p>[Member management features will be added here]</p>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>System Version 1.0 | Contact Support: support@sacco.ug | © 2025 SACCO</p>
+    </footer>
+
+    <script src="leader-scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SACCO Trader Portal</title>
+    <link rel="stylesheet" href="trader-styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">SACCO Logo</div>
+        <h1>Trader Portal</h1>
+        <div class="user-info">
+            <select id="language-toggle">
+                <option value="en">English</option>
+                <option value="lg">Luganda</option>
+            </select>
+            <span>Welcome, [Trader Name]</span>
+            <button id="logout-btn">Logout</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Tabs -->
+        <nav class="tabs">
+            <button class="tab-btn active" data-tab="announcements">Announcements</button>
+            <button class="tab-btn" data-tab="my-listings">My Listings</button>
+            <button class="tab-btn" data-tab="social-feed">Social Feed</button>
+        </nav>
+
+        <!-- Announcements Tab -->
+        <section id="announcements" class="tab-content active">
+            <h2>Announcements</h2>
+            <ul id="announcements-list">
+                <li>
+                    <h3>AGM on March 20, 2025</h3>
+                    <p>Join us at 10 AM at the SACCO office.</p>
+                </li>
+                <li>
+                    <h3>New 5% Loan Interest Rate</h3>
+                    <p>Effective April 1, 2025. Apply now!</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- My Listings Tab -->
+        <section id="my-listings" class="tab-content">
+            <h2>My Listings</h2>
+            <button id="add-listing-btn" class="action-btn">Add New Listing</button>
+            <ul id="listings-list">
+                <li data-id="1">
+                    <h3>Farm Tools - UGX 5,000</h3>
+                    <p>High-quality hoes for farming. Contact: 0771234567</p>
+                    <button class="edit-btn">Edit</button>
+                    <button class="delete-btn">Delete</button>
+                </li>
+            </ul>
+            <!-- Add/Edit Listing Form (Hidden by Default) -->
+            <form id="listing-form" style="display: none;">
+                <h3 id="form-title">Add New Listing</h3>
+                <input type="hidden" id="listing-id">
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" required>
+                <label for="price">Price (UGX):</label>
+                <input type="number" id="price" required>
+                <label for="description">Description:</label>
+                <textarea id="description" required></textarea>
+                <label for="contact">Contact Info:</label>
+                <input type="text" id="contact" required>
+                <button type="submit">Save</button>
+                <button type="button" id="cancel-form">Cancel</button>
+            </form>
+        </section>
+
+        <!-- Social Feed Tab -->
+        <section id="social-feed" class="tab-content">
+            <h2>Social Feed</h2>
+            <iframe src="feed.html" style="width: 100%; height: 80vh; border: none;"></iframe>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>System Version 1.0 | Contact Support: support@sacco.ug | © 2025 SACCO</p>
+    </footer>
+
+    <script src="trader-scripts.js"></script>
+</body>
+</html>

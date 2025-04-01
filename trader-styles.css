@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ecf0f1;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+}
+
+header .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+header h1 {
+    font-size: 1.8em;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#language-toggle {
+    padding: 5px;
+}
+
+#logout-btn {
+    padding: 5px 10px;
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    background-color: #bdc3c7;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.tab-btn.active {
+    background-color: #1abc9c;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Announcements Tab */
+#announcements h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#announcements-list {
+    list-style: none;
+}
+
+#announcements-list li {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#announcements-list h3 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+#announcements-list p {
+    color: #7f8c8d;
+}
+
+/* My Listings Tab */
+#my-listings h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.action-btn {
+    padding: 10px 20px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.action-btn:hover {
+    background-color: #16a085;
+}
+
+#listings-list {
+    list-style: none;
+}
+
+#listings-list li {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#listings-list h3 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+#listings-list p {
+    color: #7f8c8d;
+}
+
+#listings-list button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.edit-btn:hover {
+    background-color: #2980b9;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
+
+#listing-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#listing-form label {
+    font-weight: bold;
+    color: #34495e;
+}
+
+#listing-form input,
+#listing-form textarea {
+    padding: 10px;
+    font-size: 1.1em;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+}
+
+#listing-form textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+#listing-form button {
+    padding: 10px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+#listing-form button:hover {
+    background-color: #16a085;
+}
+
+#cancel-form {
+    background-color: #bdc3c7;
+}
+
+#cancel-form:hover {
+    background-color: #95a5a6;
+}
+
+/* Social Feed Tab */
+#social-feed h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    main {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .tabs {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #listings-list li {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+}
