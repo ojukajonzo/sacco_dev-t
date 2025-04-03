@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SACCO Management System - Login</title>
+    <link rel="stylesheet" href="leader-styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">SACCO Logo</div>
+        <h1>SACCO Management System</h1>
+        <div class="language-toggle">
+            <select id="language-toggle">
+                <option value="en">English</option>
+                <option value="lg">Luganda</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="login-form">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <label for="user-type">I am a:</label>
+                <select id="user-type" name="user-type" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="member">Member</option>
+                    <option value="leader">Leader</option>
+                    <option value="trader">Trader</option>
+                </select>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="signup-page.html">Sign Up</a></p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>System Version 1.0 | Contact Support: support@sacco.ug | © 2025 SACCO</p>
+    </footer>
+
+    <script src="login-scripts.js"></script>
+</body>
+</html>

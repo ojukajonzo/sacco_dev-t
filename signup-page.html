@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SACCO Management System - Sign Up</title>
+    <link rel="stylesheet" href="leader-styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">SACCO Logo</div>
+        <h1>SACCO Management System</h1>
+        <div class="language-toggle">
+            <select id="language-toggle">
+                <option value="en">English</option>
+                <option value="lg">Luganda</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="signup-form">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Choose a username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+                <label for="user-type">I am a:</label>
+                <select id="user-type" name="user-type" required>
+                    <option value="" disabled selected>Select your role</option>
+                    <option value="member">Member</option>
+                    <option value="leader">Leader</option>
+                    <option value="trader">Trader</option>
+                </select>
+                <label for="sex">Sex:</label>
+                <select id="sex" name="sex" required>
+                    <option value="" disabled selected>Select your sex</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                <label for="region">Region:</label>
+                <input type="text" id="region" name="region" placeholder="e.g., Central Uganda" required>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="e.g., +256 771 234 567" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="e.g., user@example.com" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="login-page.html">Login</a></p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>System Version 1.0 | Contact Support: support@sacco.ug | © 2025 SACCO</p>
+    </footer>
+
+    <script src="signup-scripts.js"></script>
+</body>
+</html>
