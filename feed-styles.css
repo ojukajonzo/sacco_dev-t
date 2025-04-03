@@ -9,7 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #ecf0f1;
+    background-color: #141c24;
 }
 
 /* Header */
@@ -59,7 +59,7 @@ main {
 
 /* Post Form */
 .post-form {
-    background-color: white;
+    background-color: #bfd2e4;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -97,7 +97,7 @@ main {
 
 .post-options button {
     padding: 10px 20px;
-    background-color: #1abc9c;
+    background-color: #141c24;
     color: white;
     border: none;
     border-radius: 5px;
@@ -106,12 +106,12 @@ main {
 }
 
 .post-options button:hover {
-    background-color: #16a085;
+    background-color: #2980b9;
 }
 
 /* Feed */
 .feed h2 {
-    color: #2c3e50;
+    color: white;
     margin-bottom: 20px;
 }
 
@@ -131,7 +131,7 @@ main {
 
 .post-user {
     font-weight: bold;
-    color: #1abc9c;
+    color: #2980b9;
 }
 
 .post-timestamp {
@@ -151,7 +151,7 @@ main {
 
 .post-actions button {
     padding: 5px 10px;
-    background-color: #3498db;
+    background-color: #141c24;
     color: white;
     border: none;
     border-radius: 5px;
@@ -165,7 +165,7 @@ main {
 .comments-section {
     margin-top: 10px;
     padding: 10px;
-    background-color: #f9f9f9;
+    background-color: #7cabe0;
     border-radius: 5px;
 }
 
@@ -181,7 +181,7 @@ main {
 
 .comments-list li {
     padding: 5px 0;
-    color: #34495e;
+    color: white;
 }
 
 .comment-form {
@@ -193,16 +193,18 @@ main {
     flex: 1;
     padding: 5px;
     border: 1px solid #bdc3c7;
+
     border-radius: 5px;
 }
 
 .comment-form button {
     padding: 5px 10px;
-    background-color: #1abc9c;
+    color: white;
+    background-color: #141c24;
 }
 
 .comment-form button:hover {
-    background-color: #16a085;
+    background-color: #2980b9;
 }
 
 /* Footer */
