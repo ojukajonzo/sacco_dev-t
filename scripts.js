@@ -1,24 +1,24 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Screen Management
-    const screens = document.querySelectorAll('.screen');
-    const showScreen = (screenId) => {
-        screens.forEach(screen => screen.classList.remove('active'));
-        document.getElementById(screenId).classList.add('active');
+    // Simulated Member (for demo purposes)
+    const currentMember = {
+        name: 'John',
+        role: 'Member'
     };
+    document.querySelector('.user-info span').textContent = `Welcome, ${currentMember.name}`;
 
-    // Login Form
-    document.getElementById('login-form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
-        if (username && password) {
-            // Simulate login success
-            document.querySelector('#home-screen h1').textContent = `Welcome, ${username}`;
-            showScreen('home-screen');
-            // In a real app, this would authenticate via an API
-        } else {
-            alert('Please enter username and password.');
-        }
+    // Sidebar Navigation
+    const navLinks = document.querySelectorAll('.sidebar a');
+    const sections = document.querySelectorAll('.content-section');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            navLinks.forEach(l => l.classList.remove('active'));
+            sections.forEach(s => s.classList.remove('active'));
+            link.classList.add('active');
+            const sectionId = link.getAttribute('data-section');
+            document.getElementById(sectionId).classList.add('active');
+        });
     });
 
     // Language Toggle (Simulated)
@@ -26,35 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
     languageToggle.addEventListener('change', (e) => {
         const lang = e.target.value;
         alert(`Language switched to ${lang === 'en' ? 'English' : 'Luganda'}. Translation not implemented in this demo.`);
-        // In a real app, this would update text content based on language files
     });
 
     // Logout Button (Simulated)
     document.getElementById('logout-btn').addEventListener('click', () => {
         alert('Logging out...');
-        showScreen('login-screen');
-        // In a real app, this would clear session data and redirect to login
+        // In a real app, this would redirect to a login page
     });
 
-    // Quick Actions
-    document.getElementById('check-balance-btn').addEventListener('click', () => {
-        showScreen('balance-screen');
-        // In a real app, this would fetch balance data from the Member Database (D1)
-    });
-
-    document.getElementById('view-announcements-btn').addEventListener('click', () => {
-        showScreen('announcements-screen');
-        // In a real app, this would fetch announcements from the Announcements Database (D3)
-    });
-
-    document.getElementById('contact-sacco-btn').addEventListener('click', () => {
-        showScreen('contact-screen');
-    });
-
-    // Back Buttons
-    document.querySelectorAll('.back-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            showScreen('home-screen');
-        });
+    // Refresh Balance (Simulated)
+    document.getElementById('refresh-balance-btn').addEventListener('click', () => {
+        alert('Refreshing balance...');
+        // In a real app, this would fetch the latest balance from the Member Database (D1)
     });
 });
